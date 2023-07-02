@@ -1,0 +1,113 @@
+.contact {
+  display: inline-block;
+
+  &__item-tel {
+    margin-bottom: 32px;
+    font-weight: 500;
+    font-size: 34px;
+    line-height: 1.17;
+    letter-spacing: 0.02em;
+    color: #2196f3;
+  }
+
+  &__item-mail {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+    letter-spacing: 0.02em;
+    color: #757575;
+  }
+
+  &--mobile {
+    margin-bottom: 64px;
+  }
+}
+
+.desktop_contact {
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
+}
+
+.desktop_contact {
+  @media screen and (min-width: 1200px) {
+    display: block;
+  }
+}
+.contact {
+  font-weight: 500;
+  line-height: 1.15;
+  letter-spacing: 0.02em;
+
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+
+  @media screen and (min-width: 768px) {
+    display: block;
+  }
+
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    margin-left: auto;
+  }
+
+  &__item:first-child {
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__item + &__item {
+    @media screen and (min-width: 1200px) {
+      margin-left: 50px;
+    }
+  }
+
+  &__link {
+    &-mail:first-child {
+      @media screen and (min-width: 768px) and (max-width: 1199px) {
+        padding-top: 21px;
+      }
+    }
+
+    &-tel:last-child {
+      @media screen and (min-width: 768px) and (max-width: 1199px) {
+        padding-bottom: 21px;
+      }
+    }
+
+    @media screen and (min-width: 1200px) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding-top: 32px;
+      padding-bottom: 28px;
+    }
+
+    &:hover .contact__icon-phone,
+    &:focus .contact__icon-phone,
+    &:hover .contact__icon-envelope,
+    &:focus .contact__icon-envelope {
+      fill: var(--accent-color);
+    }
+  }
+
+  &__icon-envelope {
+    height: 12px;
+    width: 16px;
+    margin-right: 10px;
+    fill: var(--prymary-color);
+    transition: fill var(--time-drn) var(--time-trans-fcn);
+  }
+
+  &__icon-phone {
+    height: 16px;
+    width: 10px;
+    margin-right: 10px;
+    fill: var(--prymary-color);
+    transition: fill var(--time-drn) var(--time-trans-fcn);
+  }
+}

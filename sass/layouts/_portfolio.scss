@@ -1,0 +1,84 @@
+.portfolio {
+  &_list {
+    display: block;
+
+    @media screen and (min-width: 768px) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    @media screen and (min-width: 1200px) {
+      display: flex;
+      flex-wrap: wrap;
+      margin-left: calc(-1 * var(--grid-mrgn-left));
+      margin-top: calc(-1 * var(--grid-mrgn-top));
+    }
+  }
+
+  &__item {
+    border: 1px solid #eeeeee;
+    margin-bottom: 30px;
+    position: relative;
+    background: var(--logo-footer-and-active-link-button);
+
+    @media screen and (max-width: 768px) {
+      &:last-child {
+        margin-bottom: 0px;
+      }
+    }
+
+    @media screen and (min-width: 768px) {
+      flex-basis: calc((100% - 30px) / 2);
+    }
+
+    @media screen and (min-width: 1200px) {
+      flex-basis: calc((100% - var(--grid-indent) * 3) / var(--grid-item));
+      margin-left: var(--grid-mrgn-left);
+      margin-top: var(--grid-mrgn-top);
+    }
+  }
+
+  &__link:hover,
+  &__link:focus {
+    color: var(--prymary-color);
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+      1px 4px 6px rgba(0, 0, 0, 0.16);
+  }
+
+  &__link:hover .overlay,
+  &__link:focus .overlay {
+    opacity: 0.9;
+    transform: translateY(0%);
+  }
+}
+
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 294px;
+  transform: translateY(100%);
+  transition: transform var(--time-drn) var(--time-trans-fcn);
+  @include padding(63px, 63px, 24px, 24px);
+  background-color: rgb(33, 150, 243);
+  opacity: 0;
+  top: 0px;
+  @include font(18px, 1.56);
+  color: var(--logo-footer-and-active-link-button);
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    padding-top: 49px;
+    padding-bottom: 49px;
+  }
+
+  @media screen and (max-width: 479px) {
+    font-size: 14px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+}
+
+.overflow {
+  position: relative;
+  overflow: hidden;
+}

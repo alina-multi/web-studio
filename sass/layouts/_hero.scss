@@ -1,0 +1,106 @@
+.hero {
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 118px;
+  padding-bottom: 118px;
+  text-align: center;
+
+  @media screen and (min-width: 1200px) {
+    & {
+      padding-top: 200px;
+      padding-bottom: 200px;
+    }
+  }
+}
+.hero--bg-image {
+  max-width: 1600px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: var(--dark-bg-color);
+  background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(./../images/hero/hero-mobile.jpg);
+
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    & {
+      background-image: linear-gradient(
+          to right,
+          rgba(47, 48, 58, 0.4),
+          rgba(47, 48, 58, 0.4)
+        ),
+        url(./../images/hero/hero-mobile@2x.jpg);
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    & {
+      background-image: linear-gradient(
+          to right,
+          rgba(47, 48, 58, 0.4),
+          rgba(47, 48, 58, 0.4)
+        ),
+        url(./../images/hero/hero-tablet.jpg);
+    }
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      & {
+        background-image: linear-gradient(
+            to right,
+            rgba(47, 48, 58, 0.4),
+            rgba(47, 48, 58, 0.4)
+          ),
+          url(./../images/hero/hero-tablet@2x.jpg);
+      }
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    & {
+      background-image: linear-gradient(
+          to right,
+          rgba(47, 48, 58, 0.4),
+          rgba(47, 48, 58, 0.4)
+        ),
+        url(./../images/hero/hero-desktop.jpg);
+    }
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      & {
+        background-image: linear-gradient(
+            to right,
+            rgba(47, 48, 58, 0.4),
+            rgba(47, 48, 58, 0.4)
+          ),
+          url(./../images/hero/hero-desktop@2x.jpg);
+      }
+    }
+  }
+}
+
+.hero__title {
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 696px;
+  margin-bottom: 30px;
+  font-weight: 900;
+  font-size: 26px;
+  line-height: 1.62;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #fff;
+
+  @media screen and (min-width: 1200px) {
+    & {
+      width: 696px;
+      font-size: 44px;
+      line-height: 1.36;
+    }
+  }
+}

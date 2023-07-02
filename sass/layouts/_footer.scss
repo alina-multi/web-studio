@@ -1,0 +1,109 @@
+.footer {
+  width: 100%;
+  background-color: var(--dark-bg-color);
+  color: var(--logo-footer-and-active-link-button);
+  @include padding(60px, 60px, 0px, 0px);
+
+  &_container {
+    display: flex;
+    flex-direction: column;
+
+    @media screen and (max-width: 767px) {
+      text-align: center;
+    }
+
+    @media screen and (min-width: 768px) {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: baseline;
+    }
+  }
+
+  &__item {
+    margin-bottom: 60px;
+    text-align: center;
+    &:last-child {
+      margin-bottom: 0px;
+    }
+
+    @media screen and (min-width: 768px) {
+      flex-basis: calc((100% - 30px) / 2);
+
+      &:last-child {
+        flex-basis: 100%;
+      }
+    }
+
+    @media screen and (min-width: 1200px) {
+      text-align: left;
+      margin-bottom: 0px;
+      flex-basis: calc((50% - 45px) / 2);
+
+      &:last-child {
+        flex-basis: calc(50% - 15px);
+      }
+    }
+  }
+
+  &__title--margin {
+    margin-bottom: 20px;
+  }
+
+  &__form {
+    display: block;
+    @media screen and (min-width: 1200px) {
+      display: flex;
+    }
+  }
+
+  &__label {
+    display: block;
+  }
+
+  &__input {
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 450px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+
+    padding-left: 16px;
+    padding-right: 16px;
+    background: transparent;
+    @include font(16px, 1.25);
+    color: rgba(255, 255, 255, 0.6);
+
+    @media screen and (min-width: 1200px) {
+      width: 358px;
+      margin-bottom: 0px;
+      margin-right: 12px;
+    }
+  }
+
+  &__btn--inline-flex {
+    display: block;
+    text-align: center;
+
+    @media screen and (min-width: 1200px) {
+      display: inline-flex;
+    }
+  }
+
+  &__btn-icon {
+    width: 24px;
+    height: 24px;
+    fill: var(--logo-footer-and-active-link-button);
+    margin-left: 10px;
+  }
+}
+
+/*  &__item {
+    flex-basis: calc(50% - 30px) / 2;
+  }
+  &__item:last-child {
+    flex-basis: calc(50% - 15px);
+  } */

@@ -1,0 +1,25 @@
+.logo {
+  display: inline-block;
+  font-family: "Raleway", sans-serif;
+  @include font(24px, 1.16);
+  font-weight: 700;
+  color: var(--logo-header);
+  transition: color var(--time-drn) var(--time-trans-fcn);
+
+  &--header-padding {
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+
+  &_color-accent {
+    color: var(--accent-color);
+  }
+
+  &--white {
+    color: var(--logo-footer-and-active-link-button);
+  }
+
+  @media screen and (min-width: 1200px) {
+    @include font(26px, 1.2);
+  }
+}

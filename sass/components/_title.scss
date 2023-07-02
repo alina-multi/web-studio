@@ -1,0 +1,18 @@
+.title-color {
+  color: var(--secondary-color);
+}
+
+.section-title {
+  font-weight: 700;
+  text-align: center;
+  @include font(28px, 1.17);
+  margin-bottom: 30px;
+
+  /*   @include font(36px, 1.16);
+  margin-bottom: 50px; */
+}
+.title_bg-dark {
+  line-height: 1.14;
+  text-transform: uppercase;
+  color: var(--logo-footer-and-active-link-button);
+}

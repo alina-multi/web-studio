@@ -1,0 +1,22 @@
+.header {
+  width: 100%;
+  border-bottom: 1px solid #ececec;
+  background-color: #ffffff;
+
+  @media screen and (min-width: 768px) {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+  }
+
+  &--container {
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    @media screen and (max-width: 768px) {
+      justify-content: space-between;
+    }
+  }
+}

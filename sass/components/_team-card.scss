@@ -1,0 +1,15 @@
+.team-card {
+  text-align: center;
+  @include padding(30px, 24px, 30px, 30px);
+  @include font(16px, 1.18);
+
+  &__title {
+    font-weight: 500;
+    margin-bottom: 10px;
+  }
+
+  &__text {
+    margin-bottom: 16px;
+    word-break: break-all;
+  }
+}
